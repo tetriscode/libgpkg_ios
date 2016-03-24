@@ -13,13 +13,8 @@ Pod::Spec.new do |s|
     s.platform      = :ios, '8.0'
     s.ios.deployment_target = '8.0'
     s.requires_arc = true
-
-    s.source_files = 'libgpkgios/**/*.{h,m}'
-    s.public_header_files = 'libgpkgios/**/*.h'
-    s.prefix_header_file = 'libgpkgios/libgpkgios-Prefix.h'
-    s.subspec 'no-arc' do |sna|
-        sna.requires_arc = false
-        sna.source_files = non_arc_files
-    end
+    s.xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DSQLITE_CORE -DSQLITE_ENABLE_RTREE=1'}
+    s.source_files = 'libgpkgios/**/*.{h,m,hpp,cpp,c}'
+    s.public_header_files = 'libgpkgios/**/*.{h,hpp}'
     s.frameworks = 'Foundation'
 end

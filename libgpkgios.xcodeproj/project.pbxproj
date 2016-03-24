@@ -49,8 +49,6 @@
 		56084F871C9A44AB0020CDA4 /* strbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F5B1C9A44AB0020CDA4 /* strbuf.c */; };
 		56084F881C9A44AB0020CDA4 /* strbuf.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F5C1C9A44AB0020CDA4 /* strbuf.h */; };
 		56084F891C9A44AB0020CDA4 /* tls.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F5D1C9A44AB0020CDA4 /* tls.h */; };
-		56084F8A1C9A44AB0020CDA4 /* ViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F5E1C9A44AB0020CDA4 /* ViewController.h */; };
-		56084F8B1C9A44AB0020CDA4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56084F5F1C9A44AB0020CDA4 /* ViewController.m */; };
 		56084F8C1C9A44AB0020CDA4 /* wkb.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F601C9A44AB0020CDA4 /* wkb.c */; };
 		56084F8D1C9A44AB0020CDA4 /* wkb.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F611C9A44AB0020CDA4 /* wkb.h */; };
 		56084F8E1C9A44AB0020CDA4 /* wkt.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F621C9A44AB0020CDA4 /* wkt.c */; };
@@ -117,8 +115,6 @@
 		56084F5B1C9A44AB0020CDA4 /* strbuf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = strbuf.c; sourceTree = "<group>"; };
 		56084F5C1C9A44AB0020CDA4 /* strbuf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = strbuf.h; sourceTree = "<group>"; };
 		56084F5D1C9A44AB0020CDA4 /* tls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tls.h; sourceTree = "<group>"; };
-		56084F5E1C9A44AB0020CDA4 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		56084F5F1C9A44AB0020CDA4 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		56084F601C9A44AB0020CDA4 /* wkb.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wkb.c; sourceTree = "<group>"; };
 		56084F611C9A44AB0020CDA4 /* wkb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = wkb.h; sourceTree = "<group>"; };
 		56084F621C9A44AB0020CDA4 /* wkt.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = wkt.c; sourceTree = "<group>"; };
@@ -255,8 +251,6 @@
 				56084F5B1C9A44AB0020CDA4 /* strbuf.c */,
 				56084F5C1C9A44AB0020CDA4 /* strbuf.h */,
 				56084F5D1C9A44AB0020CDA4 /* tls.h */,
-				56084F5E1C9A44AB0020CDA4 /* ViewController.h */,
-				56084F5F1C9A44AB0020CDA4 /* ViewController.m */,
 				56084F601C9A44AB0020CDA4 /* wkb.c */,
 				56084F611C9A44AB0020CDA4 /* wkb.h */,
 				56084F621C9A44AB0020CDA4 /* wkt.c */,
@@ -299,7 +293,6 @@
 				56084F861C9A44AB0020CDA4 /* sqlite.h in Headers */,
 				56084F6D1C9A44AB0020CDA4 /* boost_geom_wrapper.hpp in Headers */,
 				56084F9C1C9A4D270020CDA4 /* sqlite3ext.h in Headers */,
-				56084F8A1C9A44AB0020CDA4 /* ViewController.h in Headers */,
 				56084F6F1C9A44AB0020CDA4 /* dynlib.h in Headers */,
 				56084F8F1C9A44AB0020CDA4 /* wkt.h in Headers */,
 				56084F9B1C9A4D270020CDA4 /* sqlite3.h in Headers */,
@@ -452,7 +445,6 @@
 				56084F7F1C9A44AB0020CDA4 /* spatialdb.c in Sources */,
 				56084F811C9A44AB0020CDA4 /* spl_db.c in Sources */,
 				56084F6C1C9A44AB0020CDA4 /* boost_geom_wrapper.cpp in Sources */,
-				56084F8B1C9A44AB0020CDA4 /* ViewController.m in Sources */,
 				56084F9A1C9A4D270020CDA4 /* sqlite3.c in Sources */,
 				56084F8E1C9A44AB0020CDA4 /* wkt.c in Sources */,
 				56084F691C9A44AB0020CDA4 /* boost_geom_func.cpp in Sources */,
@@ -527,7 +519,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
@@ -616,6 +608,11 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"LIBGPKG_VERSION=1",
+				);
 				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/ofxiOSBoost/libs/boost/include\"/**";
 				INFOPLIST_FILE = libgpkgios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

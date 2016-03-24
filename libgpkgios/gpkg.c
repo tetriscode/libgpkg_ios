@@ -21,7 +21,7 @@ extern "C" {
 #endif
 
 GPKG_EXPORT const char *GPKG_CALL gpkg_libversion() {
-  return LIBGPKG_VERSION;
+  return "1";
 }
 
 GPKG_EXPORT int GPKG_CALL sqlite3_gpkg_auto_init(sqlite3 *db, const char **pzErrMsg, const sqlite3_api_routines *pThunk) {

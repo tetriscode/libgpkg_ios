@@ -16,4 +16,5 @@ FOUNDATION_EXPORT const unsigned char libgpkgiosVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <libgpkgios/PublicHeader.h>
 
-
+#import "sqlite3.h"
+#import "gpkg.h"
