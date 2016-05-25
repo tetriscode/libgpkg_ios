@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		47E70E79794595D069D8B5C2 /* libPods-libgpkgios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 620796E688F4B372F438B796 /* libPods-libgpkgios.a */; };
 		56084F1A1C9A435A0020CDA4 /* libgpkgios.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F191C9A435A0020CDA4 /* libgpkgios.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56084F211C9A435B0020CDA4 /* libgpkgios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56084F161C9A435A0020CDA4 /* libgpkgios.framework */; };
 		56084F261C9A435B0020CDA4 /* libgpkgiosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56084F251C9A435B0020CDA4 /* libgpkgiosTests.m */; };
@@ -58,6 +57,7 @@
 		56084F9A1C9A4D270020CDA4 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F971C9A4D270020CDA4 /* sqlite3.c */; };
 		56084F9B1C9A4D270020CDA4 /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F981C9A4D270020CDA4 /* sqlite3.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56084F9C1C9A4D270020CDA4 /* sqlite3ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F991C9A4D270020CDA4 /* sqlite3ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5678FC371CF5396600D502C3 /* libboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5678FC361CF5396600D502C3 /* libboost.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,9 +125,7 @@
 		56084F971C9A4D270020CDA4 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
 		56084F981C9A4D270020CDA4 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
 		56084F991C9A4D270020CDA4 /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3ext.h; sourceTree = "<group>"; };
-		620796E688F4B372F438B796 /* libPods-libgpkgios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-libgpkgios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6460FF73DAC957576F06FA6C /* Pods-libgpkgios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libgpkgios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-libgpkgios/Pods-libgpkgios.debug.xcconfig"; sourceTree = "<group>"; };
-		990C779624FB932CE313ACFB /* Pods-libgpkgios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libgpkgios.release.xcconfig"; path = "Pods/Target Support Files/Pods-libgpkgios/Pods-libgpkgios.release.xcconfig"; sourceTree = "<group>"; };
+		5678FC361CF5396600D502C3 /* libboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost.a; path = libs/boost/ios/libboost.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47E70E79794595D069D8B5C2 /* libPods-libgpkgios.a in Frameworks */,
+				5678FC371CF5396600D502C3 /* libboost.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,20 +148,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0FC48FA41367A37F132F0D43 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6460FF73DAC957576F06FA6C /* Pods-libgpkgios.debug.xcconfig */,
-				990C779624FB932CE313ACFB /* Pods-libgpkgios.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		251ED4267AFDBEDF2D2C4E52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5678FC361CF5396600D502C3 /* libboost.a */,
 				56084F941C9A47B40020CDA4 /* libsqlite3.tbd */,
-				620796E688F4B372F438B796 /* libPods-libgpkgios.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,7 +163,6 @@
 				56084F181C9A435A0020CDA4 /* libgpkgios */,
 				56084F241C9A435B0020CDA4 /* libgpkgiosTests */,
 				56084F171C9A435A0020CDA4 /* Products */,
-				0FC48FA41367A37F132F0D43 /* Pods */,
 				251ED4267AFDBEDF2D2C4E52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -313,12 +301,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56084F2A1C9A435B0020CDA4 /* Build configuration list for PBXNativeTarget "libgpkgios" */;
 			buildPhases = (
-				2345C4C28F748B170986A3F5 /* Check Pods Manifest.lock */,
 				56084F111C9A435A0020CDA4 /* Sources */,
 				56084F121C9A435A0020CDA4 /* Frameworks */,
 				56084F131C9A435A0020CDA4 /* Headers */,
 				56084F141C9A435A0020CDA4 /* Resources */,
-				77CFDCD23E7CE5014DE2A619 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -398,39 +384,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2345C4C28F748B170986A3F5 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		77CFDCD23E7CE5014DE2A619 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-libgpkgios/Pods-libgpkgios-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		56084F111C9A435A0020CDA4 /* Sources */ = {
@@ -570,7 +523,6 @@
 		};
 		56084F2B1C9A435B0020CDA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6460FF73DAC957576F06FA6C /* Pods-libgpkgios.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -581,10 +533,14 @@
 					"COCOAPODS=1",
 					"LIBGPKG_VERSION=1",
 				);
-				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/ofxiOSBoost/libs/boost/include\"/**";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libs/**";
 				INFOPLIST_FILE = libgpkgios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/boost/ios",
+				);
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-isystem",
@@ -602,7 +558,6 @@
 		};
 		56084F2C1C9A435B0020CDA4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 990C779624FB932CE313ACFB /* Pods-libgpkgios.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -613,10 +568,14 @@
 					"COCOAPODS=1",
 					"LIBGPKG_VERSION=1",
 				);
-				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/ofxiOSBoost/libs/boost/include\"/**";
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libs/**";
 				INFOPLIST_FILE = libgpkgios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/boost/ios",
+				);
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-isystem",
