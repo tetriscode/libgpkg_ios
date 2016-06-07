@@ -7,57 +7,57 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		47E70E79794595D069D8B5C2 /* libPods-libgpkgios.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 620796E688F4B372F438B796 /* libPods-libgpkgios.a */; };
 		56084F1A1C9A435A0020CDA4 /* libgpkgios.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F191C9A435A0020CDA4 /* libgpkgios.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56084F211C9A435B0020CDA4 /* libgpkgios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56084F161C9A435A0020CDA4 /* libgpkgios.framework */; };
 		56084F261C9A435B0020CDA4 /* libgpkgiosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 56084F251C9A435B0020CDA4 /* libgpkgiosTests.m */; };
 		56084F641C9A44AB0020CDA4 /* atomic_ops.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F381C9A44AB0020CDA4 /* atomic_ops.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F651C9A44AB0020CDA4 /* binstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F391C9A44AB0020CDA4 /* binstream.c */; };
+		56084F651C9A44AB0020CDA4 /* binstream.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F391C9A44AB0020CDA4 /* binstream.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F661C9A44AB0020CDA4 /* binstream.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F3A1C9A44AB0020CDA4 /* binstream.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F671C9A44AB0020CDA4 /* blobio.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F3B1C9A44AB0020CDA4 /* blobio.c */; };
+		56084F671C9A44AB0020CDA4 /* blobio.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F3B1C9A44AB0020CDA4 /* blobio.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F681C9A44AB0020CDA4 /* blobio.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F3C1C9A44AB0020CDA4 /* blobio.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F691C9A44AB0020CDA4 /* boost_geom_func.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56084F3D1C9A44AB0020CDA4 /* boost_geom_func.cpp */; };
-		56084F6A1C9A44AB0020CDA4 /* boost_geom_io.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56084F3E1C9A44AB0020CDA4 /* boost_geom_io.cpp */; };
+		56084F691C9A44AB0020CDA4 /* boost_geom_func.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56084F3D1C9A44AB0020CDA4 /* boost_geom_func.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
+		56084F6A1C9A44AB0020CDA4 /* boost_geom_io.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56084F3E1C9A44AB0020CDA4 /* boost_geom_io.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F6B1C9A44AB0020CDA4 /* boost_geom_io.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 56084F3F1C9A44AB0020CDA4 /* boost_geom_io.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F6C1C9A44AB0020CDA4 /* boost_geom_wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56084F401C9A44AB0020CDA4 /* boost_geom_wrapper.cpp */; };
+		56084F6C1C9A44AB0020CDA4 /* boost_geom_wrapper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 56084F401C9A44AB0020CDA4 /* boost_geom_wrapper.cpp */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F6D1C9A44AB0020CDA4 /* boost_geom_wrapper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 56084F411C9A44AB0020CDA4 /* boost_geom_wrapper.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		56084F6E1C9A44AB0020CDA4 /* boost_geometries.hpp in Headers */ = {isa = PBXBuildFile; fileRef = 56084F421C9A44AB0020CDA4 /* boost_geometries.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		56084F6F1C9A44AB0020CDA4 /* dynlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F431C9A44AB0020CDA4 /* dynlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F701C9A44AB0020CDA4 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F441C9A44AB0020CDA4 /* error.c */; };
+		56084F701C9A44AB0020CDA4 /* error.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F441C9A44AB0020CDA4 /* error.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F711C9A44AB0020CDA4 /* error.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F451C9A44AB0020CDA4 /* error.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F721C9A44AB0020CDA4 /* fp.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F461C9A44AB0020CDA4 /* fp.c */; };
+		56084F721C9A44AB0020CDA4 /* fp.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F461C9A44AB0020CDA4 /* fp.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F731C9A44AB0020CDA4 /* fp.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F471C9A44AB0020CDA4 /* fp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56084F741C9A44AB0020CDA4 /* geom_func.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F481C9A44AB0020CDA4 /* geom_func.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F751C9A44AB0020CDA4 /* geomio.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F491C9A44AB0020CDA4 /* geomio.c */; };
+		56084F751C9A44AB0020CDA4 /* geomio.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F491C9A44AB0020CDA4 /* geomio.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F761C9A44AB0020CDA4 /* geomio.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F4A1C9A44AB0020CDA4 /* geomio.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F771C9A44AB0020CDA4 /* gpkg_db.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F4B1C9A44AB0020CDA4 /* gpkg_db.c */; };
-		56084F781C9A44AB0020CDA4 /* gpkg_geom.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F4C1C9A44AB0020CDA4 /* gpkg_geom.c */; };
+		56084F771C9A44AB0020CDA4 /* gpkg_db.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F4B1C9A44AB0020CDA4 /* gpkg_db.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		56084F781C9A44AB0020CDA4 /* gpkg_geom.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F4C1C9A44AB0020CDA4 /* gpkg_geom.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F791C9A44AB0020CDA4 /* gpkg_geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F4D1C9A44AB0020CDA4 /* gpkg_geom.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F7A1C9A44AB0020CDA4 /* gpkg.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F4E1C9A44AB0020CDA4 /* gpkg.c */; };
+		56084F7A1C9A44AB0020CDA4 /* gpkg.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F4E1C9A44AB0020CDA4 /* gpkg.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F7B1C9A44AB0020CDA4 /* gpkg.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F4F1C9A44AB0020CDA4 /* gpkg.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F7C1C9A44AB0020CDA4 /* i18n.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F501C9A44AB0020CDA4 /* i18n.c */; };
+		56084F7C1C9A44AB0020CDA4 /* i18n.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F501C9A44AB0020CDA4 /* i18n.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F7D1C9A44AB0020CDA4 /* i18n.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F511C9A44AB0020CDA4 /* i18n.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56084F7E1C9A44AB0020CDA4 /* spatialdb_internal.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F521C9A44AB0020CDA4 /* spatialdb_internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F7F1C9A44AB0020CDA4 /* spatialdb.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F531C9A44AB0020CDA4 /* spatialdb.c */; };
+		56084F7F1C9A44AB0020CDA4 /* spatialdb.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F531C9A44AB0020CDA4 /* spatialdb.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F801C9A44AB0020CDA4 /* spatialdb.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F541C9A44AB0020CDA4 /* spatialdb.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F811C9A44AB0020CDA4 /* spl_db.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F551C9A44AB0020CDA4 /* spl_db.c */; };
-		56084F821C9A44AB0020CDA4 /* spl_geom.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F561C9A44AB0020CDA4 /* spl_geom.c */; };
+		56084F811C9A44AB0020CDA4 /* spl_db.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F551C9A44AB0020CDA4 /* spl_db.c */; settings = {COMPILER_FLAGS = "-w"; }; };
+		56084F821C9A44AB0020CDA4 /* spl_geom.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F561C9A44AB0020CDA4 /* spl_geom.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F831C9A44AB0020CDA4 /* spl_geom.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F571C9A44AB0020CDA4 /* spl_geom.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F841C9A44AB0020CDA4 /* sql.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F581C9A44AB0020CDA4 /* sql.c */; };
+		56084F841C9A44AB0020CDA4 /* sql.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F581C9A44AB0020CDA4 /* sql.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F851C9A44AB0020CDA4 /* sql.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F591C9A44AB0020CDA4 /* sql.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56084F861C9A44AB0020CDA4 /* sqlite.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F5A1C9A44AB0020CDA4 /* sqlite.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F871C9A44AB0020CDA4 /* strbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F5B1C9A44AB0020CDA4 /* strbuf.c */; };
+		56084F871C9A44AB0020CDA4 /* strbuf.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F5B1C9A44AB0020CDA4 /* strbuf.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F881C9A44AB0020CDA4 /* strbuf.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F5C1C9A44AB0020CDA4 /* strbuf.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56084F891C9A44AB0020CDA4 /* tls.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F5D1C9A44AB0020CDA4 /* tls.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F8C1C9A44AB0020CDA4 /* wkb.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F601C9A44AB0020CDA4 /* wkb.c */; };
+		56084F8C1C9A44AB0020CDA4 /* wkb.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F601C9A44AB0020CDA4 /* wkb.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F8D1C9A44AB0020CDA4 /* wkb.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F611C9A44AB0020CDA4 /* wkb.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56084F8E1C9A44AB0020CDA4 /* wkt.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F621C9A44AB0020CDA4 /* wkt.c */; };
+		56084F8E1C9A44AB0020CDA4 /* wkt.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F621C9A44AB0020CDA4 /* wkt.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F8F1C9A44AB0020CDA4 /* wkt.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F631C9A44AB0020CDA4 /* wkt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56084F921C9A44C50020CDA4 /* Test.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F901C9A44C50020CDA4 /* Test.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56084F931C9A44C50020CDA4 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 56084F911C9A44C50020CDA4 /* Test.m */; };
-		56084F9A1C9A4D270020CDA4 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F971C9A4D270020CDA4 /* sqlite3.c */; };
+		56084F9A1C9A4D270020CDA4 /* sqlite3.c in Sources */ = {isa = PBXBuildFile; fileRef = 56084F971C9A4D270020CDA4 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-w"; }; };
 		56084F9B1C9A4D270020CDA4 /* sqlite3.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F981C9A4D270020CDA4 /* sqlite3.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		56084F9C1C9A4D270020CDA4 /* sqlite3ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 56084F991C9A4D270020CDA4 /* sqlite3ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5678FC371CF5396600D502C3 /* libboost.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5678FC361CF5396600D502C3 /* libboost.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,9 +125,7 @@
 		56084F971C9A4D270020CDA4 /* sqlite3.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sqlite3.c; sourceTree = "<group>"; };
 		56084F981C9A4D270020CDA4 /* sqlite3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3.h; sourceTree = "<group>"; };
 		56084F991C9A4D270020CDA4 /* sqlite3ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sqlite3ext.h; sourceTree = "<group>"; };
-		620796E688F4B372F438B796 /* libPods-libgpkgios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-libgpkgios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6460FF73DAC957576F06FA6C /* Pods-libgpkgios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libgpkgios.debug.xcconfig"; path = "Pods/Target Support Files/Pods-libgpkgios/Pods-libgpkgios.debug.xcconfig"; sourceTree = "<group>"; };
-		990C779624FB932CE313ACFB /* Pods-libgpkgios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-libgpkgios.release.xcconfig"; path = "Pods/Target Support Files/Pods-libgpkgios/Pods-libgpkgios.release.xcconfig"; sourceTree = "<group>"; };
+		5678FC361CF5396600D502C3 /* libboost.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libboost.a; path = libs/boost/ios/libboost.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,7 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47E70E79794595D069D8B5C2 /* libPods-libgpkgios.a in Frameworks */,
+				5678FC371CF5396600D502C3 /* libboost.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,20 +148,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0FC48FA41367A37F132F0D43 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6460FF73DAC957576F06FA6C /* Pods-libgpkgios.debug.xcconfig */,
-				990C779624FB932CE313ACFB /* Pods-libgpkgios.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		251ED4267AFDBEDF2D2C4E52 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5678FC361CF5396600D502C3 /* libboost.a */,
 				56084F941C9A47B40020CDA4 /* libsqlite3.tbd */,
-				620796E688F4B372F438B796 /* libPods-libgpkgios.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -174,7 +163,6 @@
 				56084F181C9A435A0020CDA4 /* libgpkgios */,
 				56084F241C9A435B0020CDA4 /* libgpkgiosTests */,
 				56084F171C9A435A0020CDA4 /* Products */,
-				0FC48FA41367A37F132F0D43 /* Pods */,
 				251ED4267AFDBEDF2D2C4E52 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -313,12 +301,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56084F2A1C9A435B0020CDA4 /* Build configuration list for PBXNativeTarget "libgpkgios" */;
 			buildPhases = (
-				2345C4C28F748B170986A3F5 /* Check Pods Manifest.lock */,
 				56084F111C9A435A0020CDA4 /* Sources */,
 				56084F121C9A435A0020CDA4 /* Frameworks */,
 				56084F131C9A435A0020CDA4 /* Headers */,
 				56084F141C9A435A0020CDA4 /* Resources */,
-				77CFDCD23E7CE5014DE2A619 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -398,39 +384,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		2345C4C28F748B170986A3F5 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		77CFDCD23E7CE5014DE2A619 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-libgpkgios/Pods-libgpkgios-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		56084F111C9A435A0020CDA4 /* Sources */ = {
@@ -570,21 +523,26 @@
 		};
 		56084F2B1C9A435B0020CDA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6460FF73DAC957576F06FA6C /* Pods-libgpkgios.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
 					"LIBGPKG_VERSION=1",
 				);
-				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/ofxiOSBoost/libs/boost/include\"/**";
+				GCC_WARN_INHIBIT_ALL_WARNINGS = NO;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libs/**";
 				INFOPLIST_FILE = libgpkgios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/boost/ios",
+				);
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-isystem",
@@ -602,21 +560,26 @@
 		};
 		56084F2C1C9A435B0020CDA4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 990C779624FB932CE313ACFB /* Pods-libgpkgios.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"$(inherited)",
 					"COCOAPODS=1",
 					"LIBGPKG_VERSION=1",
 				);
-				HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/ofxiOSBoost/libs/boost/include\"/**";
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/libs/**";
 				INFOPLIST_FILE = libgpkgios/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libs/boost/ios",
+				);
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-isystem",
