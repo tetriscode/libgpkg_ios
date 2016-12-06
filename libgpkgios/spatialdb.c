@@ -33,43 +33,221 @@
 #include "wkb.h"
 #include "wkt.h"
 
-#define ST_MIN_MAX(name, check, field)                                         \
-  static void ST_##name(sqlite3_context *context, int nbArgs,                  \
-                        sqlite3_value **args) {                                \
-    spatialdb_t *spatialdb;                                                    \
-    FUNCTION_GEOM_ARG(geomblob);                                               \
-                                                                               \
-    FUNCTION_START_STATIC(context, 256);                                       \
-    spatialdb = (spatialdb_t *)sqlite3_user_data(context);                     \
-    FUNCTION_GET_GEOM_ARG_UNSAFE(context, spatialdb, geomblob, 0);             \
-                                                                               \
-    if (geomblob.envelope.check == 0) {                                        \
-      if (spatialdb->fill_envelope(&FUNCTION_GEOM_ARG_STREAM(geomblob),        \
-                                   &geomblob.envelope,                         \
-                                   FUNCTION_ERROR) != SQLITE_OK) {             \
-        if (error_count(FUNCTION_ERROR) == 0)                                  \
-          error_append(FUNCTION_ERROR, "Invalid geometry blob header");        \
-        goto exit;                                                             \
-      }                                                                        \
-    }                                                                          \
-                                                                               \
-    if (geomblob.envelope.check) {                                             \
-      sqlite3_result_double(context, geomblob.envelope.field);                 \
-    } else {                                                                   \
-      sqlite3_result_null(context);                                            \
-    }                                                                          \
-    FUNCTION_END(context);                                                     \
-    FUNCTION_FREE_GEOM_ARG(geomblob);                                          \
+static void ST_MinX(sqlite3_context *context, int nbArgs,
+                      sqlite3_value **args) {
+  spatialdb_t *spatialdb;
+  FUNCTION_GEOM_ARG(geomblob);
+  FUNCTION_START_STATIC(context, 256);                                       
+  spatialdb = (spatialdb_t *)sqlite3_user_data(context);                     
+  FUNCTION_GET_GEOM_ARG_UNSAFE(context, spatialdb, geomblob, 0);             
+  
+  if (geomblob.envelope.has_env_x) {
+    if (spatialdb->fill_envelope(&FUNCTION_GEOM_ARG_STREAM(geomblob),        
+                                 &geomblob.envelope,                         
+                                 FUNCTION_ERROR) != SQLITE_OK) {             
+      if (error_count(FUNCTION_ERROR) == 0)                                  
+        error_append(FUNCTION_ERROR, "Invalid geometry blob header");        
+      goto exit;                                                             
+    }                                                                        
+  }                                                                          
+  
+  if (geomblob.envelope.has_env_x) {
+    sqlite3_result_double(context, geomblob.envelope.min_x);
+  } else {                                                                   
+    sqlite3_result_null(context);                                            
+  }                                                                          
+  FUNCTION_END(context);                                                     
+  FUNCTION_FREE_GEOM_ARG(geomblob);                                          
+}
+
+static void ST_MaxX(sqlite3_context *context, int nbArgs,
+                    sqlite3_value **args) {
+  spatialdb_t *spatialdb;
+  FUNCTION_GEOM_ARG(geomblob);
+  FUNCTION_START_STATIC(context, 256);
+  spatialdb = (spatialdb_t *)sqlite3_user_data(context);
+  FUNCTION_GET_GEOM_ARG_UNSAFE(context, spatialdb, geomblob, 0);
+
+  if (geomblob.envelope.has_env_x) {
+    if (spatialdb->fill_envelope(&FUNCTION_GEOM_ARG_STREAM(geomblob),
+                                 &geomblob.envelope,
+                                 FUNCTION_ERROR) != SQLITE_OK) {
+      if (error_count(FUNCTION_ERROR) == 0)
+        error_append(FUNCTION_ERROR, "Invalid geometry blob header");
+      goto exit;
+    }
   }
 
-ST_MIN_MAX(MinX, has_env_x, min_x)
-ST_MIN_MAX(MaxX, has_env_x, max_x)
-ST_MIN_MAX(MinY, has_env_y, min_y)
-ST_MIN_MAX(MaxY, has_env_y, max_y)
-ST_MIN_MAX(MinZ, has_env_z, min_z)
-ST_MIN_MAX(MaxZ, has_env_z, max_z)
-ST_MIN_MAX(MinM, has_env_m, min_m)
-ST_MIN_MAX(MaxM, has_env_m, max_m)
+  if (geomblob.envelope.has_env_x) {
+    sqlite3_result_double(context, geomblob.envelope.max_x);
+  } else {
+    sqlite3_result_null(context);
+  }
+  FUNCTION_END(context);
+  FUNCTION_FREE_GEOM_ARG(geomblob);
+}
+
+static void ST_MaxY(sqlite3_context *context, int nbArgs,
+                    sqlite3_value **args) {
+  spatialdb_t *spatialdb;
+  FUNCTION_GEOM_ARG(geomblob);
+  FUNCTION_START_STATIC(context, 256);
+  spatialdb = (spatialdb_t *)sqlite3_user_data(context);
+  FUNCTION_GET_GEOM_ARG_UNSAFE(context, spatialdb, geomblob, 0);
+
+  if (geomblob.envelope.has_env_y) {
+    if (spatialdb->fill_envelope(&FUNCTION_GEOM_ARG_STREAM(geomblob),
+                                 &geomblob.envelope,
+                                 FUNCTION_ERROR) != SQLITE_OK) {
+      if (error_count(FUNCTION_ERROR) == 0)
+        error_append(FUNCTION_ERROR, "Invalid geometry blob header");
+      goto exit;
+    }
+  }
+
+  if (geomblob.envelope.has_env_y) {
+    sqlite3_result_double(context, geomblob.envelope.max_y);
+  } else {
+    sqlite3_result_null(context);
+  }
+  FUNCTION_END(context);
+  FUNCTION_FREE_GEOM_ARG(geomblob);
+}
+
+static void ST_MinY(sqlite3_context *context, int nbArgs,
+                    sqlite3_value **args) {
+  spatialdb_t *spatialdb;
+  FUNCTION_GEOM_ARG(geomblob);
+  FUNCTION_START_STATIC(context, 256);
+  spatialdb = (spatialdb_t *)sqlite3_user_data(context);
+  FUNCTION_GET_GEOM_ARG_UNSAFE(context, spatialdb, geomblob, 0);
+
+  if (geomblob.envelope.has_env_y) {
+    if (spatialdb->fill_envelope(&FUNCTION_GEOM_ARG_STREAM(geomblob),
+                                 &geomblob.envelope,
+                                 FUNCTION_ERROR) != SQLITE_OK) {
+      if (error_count(FUNCTION_ERROR) == 0)
+        error_append(FUNCTION_ERROR, "Invalid geometry blob header");
+      goto exit;
+    }
+  }
+
+  if (geomblob.envelope.has_env_y) {
+    sqlite3_result_double(context, geomblob.envelope.min_y);
+  } else {
+    sqlite3_result_null(context);
+  }
+  FUNCTION_END(context);
+  FUNCTION_FREE_GEOM_ARG(geomblob);
+}
+
+static void ST_MinZ(sqlite3_context *context, int nbArgs,
+                    sqlite3_value **args) {
+  spatialdb_t *spatialdb;
+  FUNCTION_GEOM_ARG(geomblob);
+  FUNCTION_START_STATIC(context, 256);
+  spatialdb = (spatialdb_t *)sqlite3_user_data(context);
+  FUNCTION_GET_GEOM_ARG_UNSAFE(context, spatialdb, geomblob, 0);
+
+  if (geomblob.envelope.has_env_z) {
+    if (spatialdb->fill_envelope(&FUNCTION_GEOM_ARG_STREAM(geomblob),
+                                 &geomblob.envelope,
+                                 FUNCTION_ERROR) != SQLITE_OK) {
+      if (error_count(FUNCTION_ERROR) == 0)
+        error_append(FUNCTION_ERROR, "Invalid geometry blob header");
+      goto exit;
+    }
+  }
+
+  if (geomblob.envelope.has_env_z) {
+    sqlite3_result_double(context, geomblob.envelope.min_z);
+  } else {
+    sqlite3_result_null(context);
+  }
+  FUNCTION_END(context);
+  FUNCTION_FREE_GEOM_ARG(geomblob);
+}
+
+static void ST_MaxZ(sqlite3_context *context, int nbArgs,
+                    sqlite3_value **args) {
+  spatialdb_t *spatialdb;
+  FUNCTION_GEOM_ARG(geomblob);
+  FUNCTION_START_STATIC(context, 256);
+  spatialdb = (spatialdb_t *)sqlite3_user_data(context);
+  FUNCTION_GET_GEOM_ARG_UNSAFE(context, spatialdb, geomblob, 0);
+
+  if (geomblob.envelope.has_env_z) {
+    if (spatialdb->fill_envelope(&FUNCTION_GEOM_ARG_STREAM(geomblob),
+                                 &geomblob.envelope,
+                                 FUNCTION_ERROR) != SQLITE_OK) {
+      if (error_count(FUNCTION_ERROR) == 0)
+        error_append(FUNCTION_ERROR, "Invalid geometry blob header");
+      goto exit;
+    }
+  }
+
+  if (geomblob.envelope.has_env_z) {
+    sqlite3_result_double(context, geomblob.envelope.max_z);
+  } else {
+    sqlite3_result_null(context);
+  }
+  FUNCTION_END(context);
+  FUNCTION_FREE_GEOM_ARG(geomblob);
+}
+
+static void ST_MaxM(sqlite3_context *context, int nbArgs,
+                    sqlite3_value **args) {
+  spatialdb_t *spatialdb;
+  FUNCTION_GEOM_ARG(geomblob);
+  FUNCTION_START_STATIC(context, 256);
+  spatialdb = (spatialdb_t *)sqlite3_user_data(context);
+  FUNCTION_GET_GEOM_ARG_UNSAFE(context, spatialdb, geomblob, 0);
+
+  if (geomblob.envelope.has_env_m) {
+    if (spatialdb->fill_envelope(&FUNCTION_GEOM_ARG_STREAM(geomblob),
+                                 &geomblob.envelope,
+                                 FUNCTION_ERROR) != SQLITE_OK) {
+      if (error_count(FUNCTION_ERROR) == 0)
+        error_append(FUNCTION_ERROR, "Invalid geometry blob header");
+      goto exit;
+    }
+  }
+
+  if (geomblob.envelope.has_env_m) {
+    sqlite3_result_double(context, geomblob.envelope.max_m);
+  } else {
+    sqlite3_result_null(context);
+  }
+  FUNCTION_END(context);
+  FUNCTION_FREE_GEOM_ARG(geomblob);
+}
+
+static void ST_MinM(sqlite3_context *context, int nbArgs,
+                    sqlite3_value **args) {
+  spatialdb_t *spatialdb;
+  FUNCTION_GEOM_ARG(geomblob);
+  FUNCTION_START_STATIC(context, 256);
+  spatialdb = (spatialdb_t *)sqlite3_user_data(context);
+  FUNCTION_GET_GEOM_ARG_UNSAFE(context, spatialdb, geomblob, 0);
+
+  if (geomblob.envelope.has_env_m) {
+    if (spatialdb->fill_envelope(&FUNCTION_GEOM_ARG_STREAM(geomblob),
+                                 &geomblob.envelope,
+                                 FUNCTION_ERROR) != SQLITE_OK) {
+      if (error_count(FUNCTION_ERROR) == 0)
+        error_append(FUNCTION_ERROR, "Invalid geometry blob header");
+      goto exit;
+    }
+  }
+
+  if (geomblob.envelope.has_env_m) {
+    sqlite3_result_double(context, geomblob.envelope.min_m);
+  } else {
+    sqlite3_result_null(context);
+  }
+  FUNCTION_END(context);
+  FUNCTION_FREE_GEOM_ARG(geomblob);
+}
 
 static void ST_SRID(sqlite3_context *context, int nbArgs,
                     sqlite3_value **args) {

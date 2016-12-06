@@ -24,7 +24,7 @@ static int callback(void *data, int argc, char **argv, char **azColName){
 
 - (void)doIt {
   NSString *filename =
-  @"/Users/wesr/Development/boundless/BoundlessSync/haiti-vectors-split.gpkg";
+  @"/Users/wesr/BoundlessSync/2FORM_STORE.gpkg";
   const char *path = [filename UTF8String];
   char *errMsg = nil;
   sqlite3 *database = nil;
@@ -35,10 +35,10 @@ static int callback(void *data, int argc, char **argv, char **azColName){
   }
   sqlite3_enable_load_extension(database, 1);
   sqlite3_gpkg_init(database, NULL, NULL);
-  NSString *sql = @"SELECT ST_Centroid(the_geom) FROM polygon_features LIMIT 1";
+  NSString *sql = @"SELECT ST_MaxX(geom),ST_MaxY(geom),ST_MinX(geom),ST_MinY(geom) FROM test_form";
   int rc;
   char *errmsg = nil;
-  rc = sqlite3_exec(database, [sql UTF8String], callback, data, &errmsg);
+  rc = sqlite3_exec(database, [sql UTF8String], callback, (void*)data, &errmsg);
   if( rc != SQLITE_OK ){
     fprintf(stderr, "SQL error: %s\n", errmsg);
     sqlite3_free(errmsg);
